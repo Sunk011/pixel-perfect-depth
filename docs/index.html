@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<html class="fontawesome-i2svg-active fontawesome-i2svg-complete"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prompt Depth Anything</title>
+    <!-- Bootstrap -->
+    <!-- <link rel="stylesheet" href="./static/css/bulma.min.css"> -->
+    <!-- 这个不能加，否则会报错 -->
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+
+<!-- cover -->
+<section>
+    <div class="jumbotron text-center mt-0">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <!-- <h2></h2> -->
+                    <h3><strong>Prompting Depth Anything for 4K Resolution Accurate Metric Depth Estimation</strong></h3>
+                    <hr style="margin-top:0px">
+                    <div class="is-size-2 publication-authors text-center">
+                        <span class="author-block">
+                            <a href="https://haotongl.github.io/"><strong>Haotong Lin</strong></a><sup>1,2</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="author-block">
+                            <a href="https://pengsida.net"><strong>Sida Peng</strong></a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </span>
+                        <span class="author-block">
+                            <a href="https://scholar.google.com/citations?user=-zs1V28AAAAJ"><strong>Jingxiao Chen</strong></a> <sup>3</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </span>
+                        <span class="author-block">
+                            <a href="https://pengsongyou.github.io/"><strong>Songyou Peng</strong></a><sup>4</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </span>
+                        <span class="author-block">
+                            <a href="https://jiamingsun.me/"><strong>Jiaming Sun</strong></a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </span>
+                        <span class="author-block">
+                            <a href="https://minghuanliu.com/"><strong>Minghuan Liu</strong></a><sup>3</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </span>
+                        <br>
+                        <span class="author-block">
+                            <a href="http://www.cad.zju.edu.cn/home/bao/"><strong>Hujun Bao</strong></a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </span>
+                        <span class="author-block">
+                            <!-- <a href="https://sites.google.com/site/jshfeng/home"><strong>Jiashi Feng</strong></a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp; -->
+                            <a href="https://scholar.google.com/citations?user=Q8iay0gAAAAJ"><strong>Jiashi Feng</strong></a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </span>
+                        <span class="author-block">
+                            <a href="https://www.xzhou.me/"><strong>Xiaowei Zhou</strong></a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </span>
+                        <span class="author-block">
+                            <a href="https://bingykang.github.io/"><strong>Bingyi Kang</strong></a><sup>2</sup>
+                        </span>
+                    </div>
+
+                    <div class="is-size-5 publication-authors text-center">
+                        <span class="author-block"><sup>1</sup><strong>Zhejiang University</strong></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="author-block"><sup>2</sup><strong>ByteDance Seed</strong></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="author-block"><sup>3</sup><strong>Shanghai Jiao Tong University</strong></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="author-block"><sup>4</sup><strong>ETH Zurich</strong></span>
+                        <!-- <br> -->
+                        <!-- <span class="author-block"><sup>+</sup><strong>Corresponding author: Xiaowei Zhou.</strong></span> -->
+                    </div>
+                    <!-- <div style="margin-top: 5px;"></div> -->
+                    <!-- <p style="color: rgb(51, 51, 51); font-size: 0.98em;">
+                        *denotes corresponding author
+                    </p> -->
+                    <br>
+                    <!-- <div style="margin-top: 20px;"></div> -->
+                    <div class="row justify-content-center">
+                        <div class="col-auto" style="padding: 0 1px;">
+                            <p class="mb-5"><a class="btn btn-large btn-light" href="assets/main_paper_with_supp.pdf" role="button" target="_blank">
+                                <i class="fa fa-file-o"></i> Paper </a></p>
+                        </div>
+                        <div class="col-auto" style="padding: 0 1px;">
+                            <p class="mb-5"><a class="btn btn-large btn-light" href="https://arxiv.org/abs/2412.14015" role="button">
+                                <i class="fa fa-file-pdf-o"></i> arXiv </a></p>
+                        </div>
+                        <div class="col-auto" style="padding: 0 1px;">
+                            <p class="mb-5"><a class="btn btn-large btn-light" href="https://github.com/DepthAnything/PromptDA" role="button" target="_blank">
+                                <i class="fa fa-github"></i> Code </a></p>
+                        </div>
+                        <div class="col-auto" style="padding: 0 1px;">
+                            <p class="mb-5"><a class="btn btn-large btn-light" href="https://huggingface.co/spaces/depth-anything/PromptDA" role="button" target="_blank">
+                                <i class="fa fa-desktop"></i> Hugging Face </a></p>
+                        </div>
+                        <div class="col-auto" style="padding: 0 1px;">
+                            <p class="mb-5"><a class="btn btn-large btn-light" href="interactive.html" role="button">
+                                <i class="fa fa-hand-paper-o"></i> Interactive Results </a></p>
+                        </div>
+                        <div class="col-auto" style="padding: 0 1px;">
+                            <p class="mb-5"><a class="btn btn-large btn-light" href="javascript:void(0);" role="button" style="pointer-events: none; color: grey;">
+                                <i class="fa fa-database"></i> Dataset</a></p>
+                        </div>
+                    </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <video width="100%" playsinline autoplay loop preload="none" muted controls>
+                    <source src="assets/teaser.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <br><br>
+                <div class="notification is-centered is-info is-rounded" style="text-align: center; background-color: #E8EEEF; padding-top: 10px; padding-bottom: 10px;">
+                    <h6 style="text-align: center; color:rgb(0, 0, 0); margin: 10px 0;">
+                        <strong>Prompt Depth Anything</strong> is a high-resolution and accurate metric depth estimation method, with the following highlights: 
+                    </h6>
+                    <h6 style="text-align: center; color:rgb(0, 0, 0); margin: 10px 0;">
+                        <li style="margin-bottom: 5px;">We <strong>use prompting to unleash the power of depth foundation models</strong>, inspired by success of prompting in VLM and LLM foundation models.</li>
+                        <li style="margin-bottom: 5px;">The widely available iPhone LiDAR is taken as the prompt, guiding the model to produce up to <strong>4K resolution accurate metric depth.</strong></li>
+                        <li style="margin-bottom: 5px;">A scalable data pipeline is introduced to train our method; We <strong>release a more detailed depth annotation for ScanNet++</strong> dataset.</li>
+                        <li style="margin-bottom: 5px;">Prompt Depth Anything benefits downstream applications, including <strong>3D reconstruction</strong> and <strong>generalized robotic grasping</strong>.</li>
+                    </h6>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3>Abstract</h3>
+                <hr style="margin-top:0px">
+                <img src="assets/teaser.jpg" width="100%">
+                <p class="text-left">Prompts play a critical role in unleashing the power of language and vision foundation models for specific tasks. For the first time, we introduce prompting into depth foundation models, creating a new paradigm for metric depth estimation termed <strong>Prompt Depth Anything</strong>. Specifically, we use a low-cost LiDAR as the prompt to guide the Depth Anything model for accurate metric depth output, achieving up to 4K resolution. Our approach centers on a concise prompt fusion design that integrates the LiDAR at multiple scales within the depth decoder. To address training challenges posed by limited datasets containing both LiDAR depth and precise GT depth, we propose a scalable data pipeline that includes synthetic data LiDAR simulation and real data pseudo GT depth generation. Our approach sets new state-of-the-arts on the ARKitScenes and ScanNet++ datasets and benefits downstream applications, including 3D reconstruction and generalized robotic grasping.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br>
+
+<section>
+    <div class="container">
+        <div class="col-12 text-center">
+            <h3>Comparisons with Monocular Depth Methods</h3>
+            <hr style="margin-top:0px">
+        </div>
+
+        <div id="results-carousel" class="carousel results-carousel">
+            <div class="item">
+                <video class='single_image_video' controls preload="metadata" autoplay muted loop playsinline>
+                    <source src="assets/metric_clip3.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="item item-york">
+                <video class='single_image_video' controls loading="lazy" autoplay muted loop playsinline>
+                    <source src="assets/metric_clip2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="item item-berliner">
+                <video class='single_image_video' controls loading="lazy" autoplay muted loop playsinline>
+                    <source src="assets/metric_clip1.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <div class="notification is-centered is-info is-rounded" style="text-align: center; background-color: #E8EEEF; padding-top: 5px; padding-bottom: 5px;">
+            <h6 style="text-align: center; color:rgb(0, 0, 0); margin: 0;">Monocular depth methods can generate high-res depth maps, <strong>but struggle with consistent metric scale information</strong>, even after aligning with LiDAR.</h6>
+        </div>
+    </div>
+</section>
+
+<br>
+
+<section>
+    <div class="container">
+        <div class="col-12 text-center">
+            <h3>Comparisons with ARKit LiDAR Depth</h3>
+            <hr style="margin-top:0px">
+        </div>
+        <div id="results-carousel" class="carousel results-carousel">
+            
+            <div class="item">
+              <img src="assets/arkit_transparent.jpeg" width="100%">
+          </div>
+          <div class="item">
+            <img src="assets/arkit_luodan2.jpg" width="100%">
+          </div>
+          <div class="item">
+            <img src="assets/arkit_luodan.jpeg" width="100%">
+          </div>
+          <!-- <div class="item">
+            <img src="assets/arkit_viser.jpg" width="100%">
+          </div> -->
+          <div class="item">
+            <video class='single_image_video' controls preload="metadata" autoplay muted loop playsinline>
+                <source src="assets/arkit_clip3.mp4" type="video/mp4">
+            </video>
+        </div>
+            <div class="item item-york">
+                <video class='single_image_video' controls loading="lazy" autoplay muted loop playsinline>
+                    <source src="assets/arkit_clip1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="item item-berliner">
+                <video class='single_image_video' controls loading="lazy" autoplay muted loop playsinline>
+                    <source src="assets/arkit_clip2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <div class="notification is-centered is-info is-rounded" style="text-align: center; background-color: #E8EEEF; padding-top: 5px; padding-bottom: 5px;">
+            <h6 style="text-align: center; color:rgb(0, 0, 0); margin: 0;">A dense LiDAR is accurate <strong>but high-cost</strong>. A low-cost LiDAR is preferred but its depth is low-res and noisy due to the limited power. </h6>
+        </div>
+        <p class="text-center">ARKit LiDAR depth is a low-resolution depth map generated by the ARKit API using the 24x24 points iPhone LiDAR and RGB images.</p>
+    </div>
+</section>
+
+<br>
+
+<section>
+    <div class="container">
+        <div class="col-12 text-center">
+            <h3>More Testing Results</h3>
+            <hr style="margin-top:0px">
+        </div>
+        <div id="results-carousel" class="carousel results-carousel">
+
+            <div class="item">
+                <video class='single_image_video' controls preload="metadata" autoplay muted loop playsinline>
+                    <source src="assets/more_clip3.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="item">
+              <video class='single_image_video' controls preload="metadata" autoplay muted loop playsinline>
+                  <source src="assets/more_statue_clip1.mp4" type="video/mp4">
+              </video>
+          </div>
+            <div class="item item-york">
+                <video class='single_image_video' controls loading="lazy" autoplay muted loop playsinline>
+                    <source src="assets/more_clip2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="item item-berliner">
+                <video class='single_image_video' controls loading="lazy" autoplay muted loop playsinline>
+                    <source src="assets/more_clip1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="item">
+              <img src="assets/more_statue_img.jpg" width="100%">
+            </div> 
+        </div>
+    </div>
+</section>
+
+<br>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3>Application: Street Reconstruction</h3>
+                <hr style="margin-top:0px">
+                <!-- <p class="text-left">The prompts can be replaced with a vehicle LiDAR, achieving high-precision depth estimation in outdoor scenes and enabling real-time high-precision 3D reconstruction of street scenes.</p> -->
+                <video width="85%" playsinline autoplay loop preload="" muted>
+                    <source src="assets/street_recon.mp4" type="video/mp4">
+                </video>
+                <div class="notification is-centered is-info is-rounded" style="text-align: center; background-color: #E8EEEF; padding-top: 5px; padding-bottom: 5px;">
+                  <h6 style="text-align: center; color:rgb(0, 0, 0); margin: 0;">The prompts can be replaced with vehicle LiDAR, achieving high-precision depth estimation in street scenes.</h6>
+              </div>
+              <!-- <p class="text-center">ARKit LiDAR depth is a low-resolution depth map generated by the ARKit API using the 24x24 points iPhone LiDAR and RGB images.</p> -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<br>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3>Application: Generalized Robotic Grasping</h3>
+                <hr style="margin-top:0px">
+                <video width="95%" playsinline autoplay loop preload="none" muted controls>
+                    <source src="assets/grg.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="notification is-centered is-info is-rounded" style="text-align: center; background-color: #E8EEEF; padding-top: 5px; padding-bottom: 5px;">
+                  <h6 style="text-align: center; color:rgb(0, 0, 0); margin: 0;">
+                    Even if the grasping policy is trained only on diffuse objects, our depth can help grasp transparent and specular ones, outperforming RGB and LiDAR.
+                  </h6>
+              </div>
+              <p class="text-center">This demo is implemented with our ViT-Small model, which can be run in <strong>94+ FPS</strong> on a single RTX 4090 GPU. The video is sped up 2x for demonstration.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<br>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h4>Acknowledgements</h4>
+                <hr style="margin-top:0px">
+                <p class="text-left">We thank the generous support from Prof. <a href="https://wnzhang.net/" target="_blank">Weinan Zhang</a> for robot experiments, including the space, objects and the Unitree H1 robot. We also thank <a href="https://scholar.google.com/citations?user=ozatRA0AAAAJ">Zhengbang Zhu</a>, Jiahang Cao, Xinyao Li, Wentao Dong for their help in setting up the robot platform and collecting robot data.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h4>Citation</h4>
+            <hr style="margin-top:0px">
+            <pre style="background-color: #e9eeef;padding: 1.25em 1.5em">
+<code>@inproceedings{lin2024promptda,
+  title={Prompting Depth Anything for 4K Resolution Accurate Metric Depth Estimation},
+  author={Lin, Haotong and Peng, Sida and Chen, Jingxiao and Peng, Songyou and Sun, Jiaming and Liu, Minghuan and Bao, Hujun and Feng, Jiashi and Zhou, Xiaowei and Kang, Bingyi},
+  journal={arXiv},
+  year={2024}
+}</code></pre>
+            <hr>
+        </div>
+    </div>
+</div>
+
+<footer class="text-center" style="margin-bottom:10px">
+    Thanks to <a href="https://lioryariv.github.io/" target="_blank">Lior Yariv</a> for the website template. 
+    Thanks to <a href="https://github.com/nerfies/nerfies.github.io" target="_blank">Nerfies</a> for the useful add-ons.
+    Thanks to <a href="https://github.com/nerfstudio-project/viser" target="_blank">Viser</a> for the useful add-ons.
+</footer>
+
+</body>
+</html>
