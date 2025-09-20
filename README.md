@@ -1,1 +1,1 @@
-# pixel-perfect-depth
+# Pixel-Perfect-Depth [NeurIPS 2025]
