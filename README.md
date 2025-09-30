@@ -22,7 +22,7 @@ its estimated depth maps can produce high-quality, flying-pixel-free point cloud
 ![teaser](assets/teaser.png)
 
 ![overview](assets/overview.png)  
-*Overview of Pixel-Perfect Depth*
+*Overview of Pixel-Perfect Depth.*
 
 ## News
 - **2024-10-01:** Paper, project page, code, models, and demo are all released.
