@@ -2,7 +2,7 @@
 <h1>Pixel-Perfect Depth</h1>
 
 <a href=""><img src='https://img.shields.io/badge/arXiv-Pixel-Perfect Depth-red' alt='Paper PDF'></a>
-<a href='https://pixel-perfect-depth.github.io/'><img src='https://img.shields.io/badge/Project_Page-Depth Anything V2-green' alt='Project Page'></a>
+<a href='https://pixel-perfect-depth.github.io/'><img src='https://img.shields.io/badge/Project_Page-Pixel-Perfect Depth-green' alt='Project Page'></a>
 <a href='https://huggingface.co/spaces/gangweix/Pixel-Perfect-Depth'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Demo-blue'></a>
 </div>
 
