@@ -20,4 +20,4 @@ Our pretrained models are available on the huggingface hub:
 
 | Model | Params | Checkpoint | Training Resolution |
 |:-|-:|:-:|:-:|
-| PPD-Large | 500M | [Download](https://huggingface.co/depth-anything/Depth-Anything-V2-Small/resolve/main/depth_anything_v2_vits.pth?download=true) | 1024x768 |
+| PPD-Large | 500M | [Download](https://huggingface.co/gangweix/Pixel-Perfect-Depth/resolve/main/ppd.pth) | 1024x768 |
