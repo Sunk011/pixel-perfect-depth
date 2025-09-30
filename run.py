@@ -15,7 +15,7 @@ if __name__ == '__main__':
     parser.add_argument('--img_path', type=str, default='assets/examples')
     parser.add_argument('--input_size', type=int, default=[1024, 768])
     parser.add_argument('--dtype', type=str, default='bf16', choices=['fp32', 'bf16', 'fp16'], help='inference precision (default: fp32)')
-    parser.add_argument('--outdir', type=str, default='depth_vis_our')
+    parser.add_argument('--outdir', type=str, default='depth_vis')
     parser.add_argument('--semantics_pth', type=str, default='checkpoints/depth_anything_v2_vitl.pth')
     parser.add_argument('--sampling_steps', type=int, default=4)
     parser.add_argument('--pred_only', action='store_true', help='only display/save the predicted depth (no input image)')
