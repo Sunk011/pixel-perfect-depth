@@ -19,7 +19,10 @@ Guang Chen<sup>2</sup> · Hangjun Ye<sup>2</sup> · [**Sida Peng**](https://peng
 This work presents Pixel-Perfect Depth, a monocular depth estimation model with pixel-space diffusion transformers. Compared to existing discriminative and generative models, 
 its estimated depth maps can produce high-quality, flying-pixel-free point clouds.
 
-![teaser](assets/teaser.png)
+<video width="100%" controls>
+  <source src="assets/teaser.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## News
 - **2024-10-01:** Paper, project page, code, models, and demo are all released.
