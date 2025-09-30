@@ -21,3 +21,29 @@ Our pretrained models are available on the huggingface hub:
 | Model | Params | Checkpoint | Training Resolution |
 |:-|-:|:-:|:-:|
 | PPD-Large | 500M | [Download](https://huggingface.co/gangweix/Pixel-Perfect-Depth/resolve/main/ppd.pth) | 1024x768 |
+
+## Usage
+
+### Prepraration
+
+```bash
+git clone https://github.com/gangweix/pixel-perfect-depth
+cd pixel-perfect-depth
+pip install -r requirements.txt
+```
+
+Download the checkpoints listed [here](#pre-trained-models) and put them under the `checkpoints` directory.
+
+### Running script on *images*
+
+```bash
+python run.py 
+```
+
+## Acknowledgement
+
+We are grateful to the [Depth Anything V2](https://github.com/DepthAnything/Depth-Anything-V2) and [DiT](https://github.com/facebookresearch/DiT) teams for their code and model release. We would also like to sincerely thank the NeurIPS reviewers for their appreciation of this work (ratings: 5, 5, 5, 5).
+
+## LICENSE
+
+Pixel-Perfect Depth model is under the Apache-2.0 license.
