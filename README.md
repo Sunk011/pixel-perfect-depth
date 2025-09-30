@@ -10,3 +10,14 @@ This work presents Pixel-Perfect Depth, a monocular depth estimation model with 
 its estimated depth maps can produce high-quality, flying-pixel-free point clouds.
 
 ![teaser](assets/teaser.png)
+
+## News
+- **2024-10-01:** Paper, project page, code, models, and demo are all released.
+
+## Pre-trained Models
+
+Our pretrained models are available on the huggingface hub:
+
+| Model | Params | Checkpoint | Training Resolution |
+|:-|-:|:-:|:-:|
+| PPD-Large | 500M | [Download](https://huggingface.co/depth-anything/Depth-Anything-V2-Small/resolve/main/depth_anything_v2_vits.pth?download=true) | 1024x768 |
