@@ -48,15 +48,21 @@ pip install -r requirements.txt
 Download our pretrained model [ppd.pth](https://huggingface.co/gangweix/Pixel-Perfect-Depth/resolve/main/ppd.pth) and put them under the `checkpoints` directory.
 In addition, you also need to download the pretrained model [depth_anything_v2_vitl.pth](https://huggingface.co/depth-anything/Depth-Anything-V2-Large/resolve/main/depth_anything_v2_vitl.pth?download=true) and put them under the `checkpoints` directory.
 
-### Running script on *images*
+### Running depth on *images*
 
 ```bash
 python run.py 
 ```
 
+### Running point cloud on *images*
+
+```bash
+python run_point_cloud.py --save_pcd
+```
+
 ## Acknowledgement
 
-We are grateful to the [Depth Anything V2](https://github.com/DepthAnything/Depth-Anything-V2) and [DiT](https://github.com/facebookresearch/DiT) teams for their code and model release. We would also like to sincerely thank the NeurIPS reviewers for their appreciation of this work (ratings: 5, 5, 5, 5).
+We are grateful to the [Depth Anything V2](https://github.com/DepthAnything/Depth-Anything-V2), [MoGe](https://github.com/microsoft/MoGe) and [DiT](https://github.com/facebookresearch/DiT) teams for their code and model release. We would also like to sincerely thank the NeurIPS reviewers for their appreciation of this work (ratings: 5, 5, 5, 5).
 
 ## LICENSE
 
