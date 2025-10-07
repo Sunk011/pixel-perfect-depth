@@ -18,7 +18,7 @@ from ppd.models.ppd import PixelPerfectDepth
 if __name__ == '__main__':
     set_seed(666) # set random seed
     parser = argparse.ArgumentParser(description='Pixel-Perfect Depth')
-    parser.add_argument('--img_path', type=str, default='assets/examples_v3')
+    parser.add_argument('--img_path', type=str, default='assets/examples')
     parser.add_argument('--input_size', type=int, default=[1024, 768])
     parser.add_argument('--outdir', type=str, default='depth_vis')
     parser.add_argument('--semantics_pth', type=str, default='checkpoints/depth_anything_v2_vitl.pth')
