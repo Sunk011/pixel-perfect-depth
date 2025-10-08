@@ -27,7 +27,8 @@ its estimated depth maps can produce high-quality, flying-pixel-free point cloud
 ## 🌟 Features
 
 * Pixel-space diffusion generation (operating directly in image space, without VAE or latent representations), capable of producing flying-pixel-free point clouds from estimated depth maps.
-* Our network architecture is purely Transformer-based, containing no convolutional layers.
+* Our model integrates the discriminative representation (ViT) into generative modeling (DiT), fully leveraging the strengths of both paradigms.
+* Our network architecture is purely transformer-based, containing no convolutional layers.
 * Although our model is trained at a fixed resolution of 1024×768, it can flexibly support various input resolutions and aspect ratios during inference.
 
 ## News
