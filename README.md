@@ -32,7 +32,7 @@ its estimated depth maps can produce high-quality, flying-pixel-free point cloud
 * Although our model is trained at a fixed resolution of 1024×768, it can flexibly support various input resolutions and aspect ratios during inference.
 
 ## News
-- **2024-10-01:** Paper, project page, code, models, and demo are all released.
+- **2024-10-09:** Paper, project page, code, models, and demo are all released.
 
 ## Pre-trained Models
 
