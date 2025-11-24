@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pixel-perfect-depth"
+version = "0.1.0"
+description = "Pixel-Perfect Depth: A monocular depth estimation model with pixel-space diffusion transformers"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Gangwei Xu"},
+    {name = "Haotong Lin"},
+    {name = "Xin Yang", email = "xinyang@hust.edu.cn"}
+]
+dependencies = [
+    "torch",
+    "torchvision",
+    "timm",
+    "opencv-python",
+    "Pillow",
+    "matplotlib",
+    "numpy",
+    "open3d",
+    "scikit-learn",
+    "gradio"
+]
+
+[project.urls]
+"Homepage" = "https://pixel-perfect-depth.github.io/"
+"Repository" = "https://github.com/gangweix/pixel-perfect-depth"
+"Paper" = "https://arxiv.org/abs/2510.07316"

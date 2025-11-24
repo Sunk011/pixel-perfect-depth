@@ -1,6 +1,8 @@
 <div align="center">
 <h1>Pixel-Perfect Depth</h1>
 
+[**中文**](README_zh-CN.md) | [**English**](README.md)
+
 [**Gangwei Xu**](https://gangweix.github.io/)<sup>1,2,&ast;</sup> · [**Haotong Lin**](https://haotongl.github.io/)<sup>3,&ast;</sup> · Hongcheng Luo<sup>2</sup> · [**Xianqi Wang**](https://scholar.google.com/citations?user=1GCLBNAAAAAJ&hl=zh-CN&oi=ao)<sup>1</sup> · [**Jingfeng Yao**](https://jingfengyao.github.io/)<sup>1</sup>
 <br>
 [**Lianghui Zhu**](https://scholar.google.com/citations?user=NvMHcs0AAAAJ&hl=zh-CN&oi=ao)<sup>1</sup> · Yuechuan Pu<sup>2</sup> · Cheng Chi<sup>2</sup> · Haiyang Sun<sup>2,&dagger;</sup> · Bing Wang<sup>2</sup> 
@@ -68,6 +70,59 @@ Please download the pretrained model [moge2.pt](https://huggingface.co/Ruicheng/
 
 ```bash
 python run_point_cloud.py --save_pcd
+```
+
+## 🖥️ Web Demo & Docker Support
+
+We provide a local Web Demo based on Gradio, supporting:
+- **Single Image Inference**: Upload an image, adjust sampling steps, and visualize/download results.
+- **Batch Processing**: Upload a folder of images, process them in batch, and download results as a ZIP file.
+- **Multi-GPU Support**: Automatically detect available GPUs and allow dynamic switching in the UI.
+
+### Using Docker (Recommended)
+
+We provide a `Dockerfile` and a helper script for easy deployment.
+
+**Prerequisites:**
+- Docker installed
+- NVIDIA Container Toolkit (for GPU support)
+- Checkpoints placed in `checkpoints/` directory
+
+**One-click Run:**
+
+```bash
+chmod +x docker-run.sh
+./docker-run.sh
+```
+
+This script will:
+1. Build the Docker image.
+2. Run the container with GPU access (`--gpus all`).
+3. Mount your local `checkpoints/` and `assets/` directories.
+4. Expose the Web UI at `http://localhost:7860`.
+
+**Manual Build & Run:**
+
+```bash
+# Build image
+docker build -t pixel-perfect-depth .
+
+# Run container
+docker run -it --rm \
+    --gpus all \
+    -p 7860:7860 \
+    -v "$(pwd)/checkpoints:/app/checkpoints" \
+    -v "$(pwd)/assets:/app/assets" \
+    pixel-perfect-depth
+```
+
+### Running Web Demo Locally (without Docker)
+
+If you have the environment set up locally:
+
+```bash
+pip install gradio
+python app.py
 ```
 
 ## Qualitative Comparisons with Previous Methods
